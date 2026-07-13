@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Nakhale | Portfolio</title>
+<meta name="description" content="Portfolio of Harsh Nakhale — B.Tech CSE student, web developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="#top" class="nav__logo">HN</a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+
+    <ul class="nav__list" id="navList">
+      <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+      <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+      <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+      <li class="nav__item"><a class="nav__link" href="#gallery">Gallery</a></li>
+      <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav__theme-btn" id="themeToggle" aria-label="Switch color theme" title="Switch theme">
+      <span class="nav__theme-icon" aria-hidden="true">🎨</span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Hello, I'm</p>
+        <h1 class="hero__title">Harsh Nakhale</h1>
+        <p class="hero__subtitle">B.Tech CSE Student &amp; Front-End Developer</p>
+        <p class="hero__text">
+          I build clean, responsive, and thoughtfully-structured web experiences —
+          currently exploring advanced CSS, Grid systems, and interactive UI design
+          at MIT ADT University.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--outline">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero__figure">
+        <div class="hero__photo-wrap">
+       <img src="harsh.jpg" alt="Portrait of Harsh Nakhale" class="hero__photo">
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll to About section">↓</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section__header">
+      <p class="section__eyebrow">Get to know me</p>
+      <h2 class="section__title">About Me</h2>
+    </div>
+
+    <div class="about__grid">
+      <article class="about__card about__card--bio">
+        <h3 class="about__heading">Who I Am</h3>
+        <p class="about__text">
+          I'm a Computer Science &amp; Engineering student passionate about building
+          interfaces that feel intentional — where layout, motion, and color all work
+          together. My coursework has taken me from HTML fundamentals through
+          JavaScript interactivity to advanced, Grid-driven layout systems.
+        </p>
+      </article>
+
+      <article class="about__card about__card--fact">
+        <span class="about__fact-icon" aria-hidden="true">🎓</span>
+        <h3 class="about__heading">Education</h3>
+        <p class="about__text">B.Tech CSE, MIT ADT University (MITSoE)</p>
+      </article>
+
+      <article class="about__card about__card--fact">
+        <span class="about__fact-icon" aria-hidden="true">💻</span>
+        <h3 class="about__heading">Focus</h3>
+        <p class="about__text">Modern CSS, responsive layout, clean code architecture</p>
+      </article>
+
+      <article class="about__card about__card--fact">
+        <span class="about__fact-icon" aria-hidden="true">🚀</span>
+        <h3 class="about__heading">Currently</h3>
+        <p class="about__text">Mastering CSS Grid, Flexbox, and design systems</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="section__header">
+      <p class="section__eyebrow">What I work with</p>
+      <h2 class="section__title">Skills</h2>
+    </div>
+
+    <div class="skills__grid">
+      <div class="skill-card">
+        <div class="skill-card__ring" style="--pct:90"><span>90%</span></div>
+        <h3 class="skill-card__name">HTML5</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__ring" style="--pct:85"><span>85%</span></div>
+        <h3 class="skill-card__name">CSS3 / Grid</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__ring" style="--pct:75"><span>75%</span></div>
+        <h3 class="skill-card__name">JavaScript</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__ring" style="--pct:70"><span>70%</span></div>
+        <h3 class="skill-card__name">Responsive Design</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__ring" style="--pct:65"><span>65%</span></div>
+        <h3 class="skill-card__name">Git / GitHub</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__ring" style="--pct:60"><span>60%</span></div>
+        <h3 class="skill-card__name">UI/UX Design</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section__header">
+      <p class="section__eyebrow">Recent work</p>
+      <h2 class="section__title">Projects</h2>
+    </div>
+
+    <div class="projects__grid">
+      <article class="project-card">
+        <div class="project-card__media">
+          <img src="https://placehold.co/500x320/4361ee/ffffff?text=Velora+Kitchen" alt="Velora Kitchen restaurant website screenshot" loading="lazy">
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Velora Kitchen</h3>
+          <p class="project-card__desc">Multi-page responsive restaurant website with menu, reservations, and gallery pages.</p>
+          <ul class="project-card__tags">
+            <li class="tag">HTML5</li>
+            <li class="tag">CSS3</li>
+            <li class="tag">Responsive</li>
+          </ul>
+          <a href="https://github.com/harsh11m/Restaurant-website" class="project-card__link" target="_blank" rel="noopener">View Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__media">
+          <img src="https://placehold.co/500x320/3a0ca3/ffffff?text=Interactive+Portfolio" alt="Interactive portfolio screenshot" loading="lazy">
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Interactive Portfolio (v2)</h3>
+          <p class="project-card__desc">JavaScript-driven portfolio with form validation, scroll effects, and accessibility upgrades.</p>
+          <ul class="project-card__tags">
+            <li class="tag">JavaScript</li>
+            <li class="tag">Accessibility</li>
+            <li class="tag">Forms</li>
+          </ul>
+          <a href="https://github.com/harsh11m/Interactive-portfolio-website" class="project-card__link" target="_blank" rel="noopener">View Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__media">
+          <img src="https://placehold.co/500x320/f72585/ffffff?text=Grid+Portfolio" alt="Advanced CSS Grid portfolio screenshot" loading="lazy">
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Advanced Grid Portfolio</h3>
+          <p class="project-card__desc">This site — a CSS Grid &amp; Flexbox driven redesign with theming and animation.</p>
+          <ul class="project-card__tags">
+            <li class="tag">CSS Grid</li>
+            <li class="tag">BEM</li>
+            <li class="tag">Theming</li>
+          </ul>
+          <a href="#top" class="project-card__link">You're on it →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="section__header">
+      <p class="section__eyebrow">Snapshots</p>
+      <h2 class="section__title">Gallery</h2>
+    </div>
+
+    <div class="gallery__grid">
+      <figure class="gallery__item gallery__item--wide">
+        <img src="https://placehold.co/800x400/4361ee/ffffff?text=Grid+Layout" alt="CSS Grid layout example" loading="lazy">
+      </figure>
+      <figure class="gallery__item">
+        <img src="https://placehold.co/400x400/3a0ca3/ffffff?text=Flexbox" alt="Flexbox navigation example" loading="lazy">
+      </figure>
+      <figure class="gallery__item">
+        <img src="https://placehold.co/400x400/f72585/ffffff?text=Animation" alt="CSS animation example" loading="lazy">
+      </figure>
+      <figure class="gallery__item gallery__item--tall">
+        <img src="https://placehold.co/400x820/4cc9f0/ffffff?text=Theme+System" alt="CSS variable theme system example" loading="lazy">
+      </figure>
+      <figure class="gallery__item">
+        <img src="https://placehold.co/400x400/4361ee/ffffff?text=Cards" alt="Project card design example" loading="lazy">
+      </figure>
+      <figure class="gallery__item">
+        <img src="https://placehold.co/400x400/3a0ca3/ffffff?text=Mobile+View" alt="Mobile responsive view example" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section__header">
+      <p class="section__eyebrow">Let's talk</p>
+      <h2 class="section__title">Contact</h2>
+    </div>
+
+    <div class="contact__grid">
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="form-field">
+          <label class="form-field__label" for="name">Name</label>
+          <input class="form-field__input" type="text" id="name" name="name" required>
+          <span class="form-field__error" id="nameError"></span>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="email">Email</label>
+          <input class="form-field__input" type="email" id="email" name="email" required>
+          <span class="form-field__error" id="emailError"></span>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="message">Message</label>
+          <textarea class="form-field__input form-field__input--textarea" id="message" name="message" rows="5" required></textarea>
+          <span class="form-field__error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn--primary contact__submit">Send Message</button>
+        <p class="contact__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact__info">
+        <h3 class="contact__info-heading">Contact Details</h3>
+        <ul class="contact__info-list">
+          <li class="contact__info-item">
+            <span class="contact__info-icon" aria-hidden="true">✉️</span>
+            <a href="mailto:harshnakhale22@gmail.com">harshnakhale22@gmail.com</a>
+          </li>
+          <li class="contact__info-item">
+            <span class="contact__info-icon" aria-hidden="true">🐙</span>
+            <a href="https://github.com/harsh11m" target="_blank" rel="noopener">github.com/harsh11m</a>
+          </li>
+          <li class="contact__info-item">
+            <span class="contact__info-icon" aria-hidden="true">🏫</span>
+            <span>MIT ADT University, Loni Kalbhor, Pune</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Harsh Nakhale. Built with CSS Grid, Flexbox &amp; a lot of coffee.</p>
+</footer>
+
+<script src="js/theme-switcher.js"></script>
+</body>
+</html>

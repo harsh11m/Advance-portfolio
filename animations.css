@@ -1,0 +1,112 @@
+/* ==========================================================================
+   animations.css — Keyframes, entrance animations, hover/focus micro-interactions
+   ========================================================================== */
+
+/* ---- Keyframes -------------------------------------------------------------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 45%, transparent); }
+  100% { box-shadow: 0 0 0 16px transparent; }
+}
+
+@keyframes underlineGrow {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ---- Entrance animations ------------------------------------------------------ */
+.hero__content { animation: fadeInUp 0.7s ease-out both; }
+.hero__figure   { animation: fadeIn 1s ease-out 0.2s both; }
+.hero__photo-wrap { animation: floatY 6s ease-in-out infinite; }
+
+.about__card,
+.skill-card,
+.project-card,
+.gallery__item {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* Stagger children within each grid via nth-child */
+.about__grid > *:nth-child(1) { animation-delay: 0.05s; }
+.about__grid > *:nth-child(2) { animation-delay: 0.12s; }
+.about__grid > *:nth-child(3) { animation-delay: 0.19s; }
+.about__grid > *:nth-child(4) { animation-delay: 0.26s; }
+
+.skills__grid > *:nth-child(1) { animation-delay: 0.05s; }
+.skills__grid > *:nth-child(2) { animation-delay: 0.1s; }
+.skills__grid > *:nth-child(3) { animation-delay: 0.15s; }
+.skills__grid > *:nth-child(4) { animation-delay: 0.2s; }
+.skills__grid > *:nth-child(5) { animation-delay: 0.25s; }
+.skills__grid > *:nth-child(6) { animation-delay: 0.3s; }
+
+.projects__grid > *:nth-child(1) { animation-delay: 0.05s; }
+.projects__grid > *:nth-child(2) { animation-delay: 0.15s; }
+.projects__grid > *:nth-child(3) { animation-delay: 0.25s; }
+
+/* ---- Scroll-in reveal (JS toggles .is-visible) --------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Hover / focus micro-interactions ------------------------------------------- */
+.nav__theme-btn:active { animation: pulseRing 0.6s ease-out; }
+
+.hero__scroll {
+  animation: floatY 2.4s ease-in-out infinite;
+}
+
+.btn--primary:active { transform: translateY(-1px) scale(0.98); }
+
+.skill-card__ring {
+  transition: transform var(--transition-fast);
+}
+.skill-card:hover .skill-card__ring { transform: scale(1.06) rotate(4deg); }
+
+/* Theme icon spins briefly on click via JS-added class */
+.nav__theme-icon.is-spinning { animation: spinSlow 0.5s ease-in-out; }
+
+/* Mobile nav toggle → X transform (JS toggles .is-active on button) */
+.nav__toggle.is-active .nav__toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.is-active .nav__toggle-bar:nth-child(2) { opacity: 0; }
+.nav__toggle.is-active .nav__toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Form field shake on validation error (JS toggles .has-error) */
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+.form-field.has-error .form-field__input {
+  border-color: var(--color-accent);
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Success pulse on form submit */
+.contact__status.is-success { color: #2a9d8f; animation: fadeIn 0.4s ease-out; }
+.contact__status.is-error { color: var(--color-accent); animation: fadeIn 0.4s ease-out; }
